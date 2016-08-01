@@ -1,0 +1,17 @@
+config BR2_PACKAGE_ARIA2
+	bool "aria2"
+	select BR2_PACKAGE_GNUTLS
+	select BR2_PACKAGE_PKGCONF
+	select BR2_PACKAGE_NETTLE
+	select BR2_PACKAGE_SQLITE
+	select BR2_PACKAGE_LIBXML2
+	select BR2_PACKAGE_C_ARES
+	select BR2_PACKAGE_GMP
+	select BR2_PACKAGE_LIBSSH2
+	select BR2_PACKAGE_ZLIB
+	help
+	  aria2 is a lightweight multi-protocol & multi-source command-line download utility.
+	  It supports HTTP/HTTPS, FTP, SFTP, BitTorrent and Metalink. aria2 can be manipulated
+	  via built-in JSON-RPC and XML-RPC interfaces.
+
+	  http://aria2.sourceforge.net/

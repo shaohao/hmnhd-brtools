@@ -1,0 +1,18 @@
+diff -purN glib-2.46.1.orig/glib/gdate.c glib-2.46.1/glib/gdate.c
+--- glib-2.44.1.orig/glib/gdate.c	2015-10-14 19:41:16.000000000 +0800
++++ glib-2.44.1/glib/gdate.c	2016-07-31 14:59:11.431904051 +0800
+@@ -2416,6 +2416,9 @@ win32_strftime_helper (const GDate     *
+ 
+ #endif
+ 
++#pragma GCC diagnostic push
++#pragma GCC diagnostic ignored "-Wformat-nonliteral"
++
+ /**
+  * g_date_strftime:
+  * @s: destination buffer
+@@ -2549,3 +2552,4 @@ g_date_strftime (gchar       *s,
+   return retval;
+ #endif
+ }
++#pragma GCC diagnostic pop
